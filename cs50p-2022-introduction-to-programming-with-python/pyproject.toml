@@ -1,0 +1,9 @@
+[project]
+name = "cs50p-2022-introduction-to-programming-with-python"
+version = "1.0.0"
+description = "Jupyter notebook collection containing lecture materials and code examples from Harvard's CS50P 2022 Introduction to Programming with Python course"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "notebook>=7.5.0",
+]
