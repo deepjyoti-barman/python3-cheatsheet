@@ -6,6 +6,240 @@
 ![additional-operations](resources/venv-and-pip-vs-uv-p2.png)
 ![key-differences](resources/venv-and-pip-vs-uv-p3.png)
 
+### uv - Jupyter Notebook for Python
+
+```bash
+# Check if Python is installed on your system
+$ python --version
+
+# If an old version of python is installed, update python to the latest version
+$ brew update
+$ brew upgrade python
+
+# Install uv globally (macOS)
+$ brew install uv
+
+# Create a project directory and navigate inside it
+$ mkdir python-notebook
+$ cd python-notebook
+
+# Create a project with uv
+$ uv init
+
+# Add Jupyter Notebook as dependency
+$ uv add notebook
+
+# (Optional) Launch and check if jupyter notebook is installed correctly
+$ uv run jupyter notebook
+
+# Open up the project in VSCode
+$ code .
+
+# Install the following VSCode extensions
+# 1. Black Formatter (Optional)
+# 2. Jupyter
+# 3. Pylance
+# 4. Python
+# 5. Python Debugger
+# 6. Python Environments
+
+# Once asked to select a Kernel
+# Choose: 'Python Environments...' -> python-notebook (Python 3.14.2) .venv/bin/python
+```
+
+### uv - Jupyter Notebook for Java
+
+```bash
+# Check if Java is installed on your system
+$ java --version
+$ javac --version
+
+# If Java is not installed, install the latest LTS version of Java (Java 11+):
+$ brew update
+$ brew install openjdk@21
+
+# Install uv globally (macOS)
+$ brew install uv
+
+# Create a project directory and navigate inside it
+$ mkdir java-notebook
+$ cd java-notebook
+
+# Create a project with uv
+$ uv init
+
+# Add Jupyter Notebook as dependency
+$ uv add notebook
+
+# Install IJava using pre-built installer
+$ curl -L -o ijava.zip https://github.com/SpencerPark/IJava/releases/download/v1.3.0/IJava-1.3.0.zip
+
+# Unzip it and navigate to the extracted directory
+$ unzip ijava.zip -d ijava
+$ cd ijava
+
+# Run the installer with the –user flag to install the kernel
+# NOTE: Installs the kernel inside ~/Library/Jupyter/kernels/java
+$ uv run python install.py --user
+
+# Verify the kernel installation
+$ uv run jupyter kernelspec list
+
+# (Optional) Launch and check if jupyter notebook is installed correctly
+$ uv run jupyter notebook
+
+# Open up the project in VSCode
+$ code .
+
+# Install the following VSCode extensions
+# 1. Prettier (Optional)
+# 2. Jupyter
+# 3. Java (Recommended) (by Oracle Corporation)
+# 4. Extension Pack for Java (Optional if #3 is installed)
+
+# Once asked to select a Kernel
+# Choose: 'Jupyter Kernel...' -> Java /java
+```
+
+### uv - Jupyter Notebook for TypeScript
+
+```bash
+# Check if Node.js is installed on your system (preferably the LTS version)
+$ node -v
+$ npm -v
+
+# If Node.js in not installed then install the latest LTS version of Node.js via nvm
+$ brew install nvm
+$ nvm list
+$ nvm install 20
+
+# Install uv globally (macOS)
+$ brew install uv
+
+# Create a project directory and navigate inside it
+$ mkdir typescript-notebook
+$ cd typescript-notebook
+
+# Create a project with uv
+$ uv init
+
+# Add Jupyter Notebook as dependency
+$ uv add notebook
+
+# Install Deno
+$ brew install deno
+
+# Install the Deno Jupyter kernel
+# NOTE: Installs the kernel inside ~/Library/Jupyter/kernels/deno
+$ deno jupyter --install
+
+# Verify the kernel installation
+$ uv run jupyter kernelspec list
+
+# (Optional) Launch and check if jupyter notebook is installed correctly
+$ uv run jupyter notebook
+
+# Open up the project in VSCode
+$ code .
+
+# Install the following VSCode extensions
+# 1. Prettier (Optional)
+# 2. Jupyter
+# 3. ESLint
+# 4. Babel JavaScript
+
+# Once asked to select a Kernel
+# Choose: 'Jupyter Kernel...' -> Deno /opt/homebrew/bin/deno
+```
+
+### uv - Jupyter Notebook for JavaScript
+
+```bash
+# Even though IJavaScript is the stable JavaScript kernel based on Node.js for Jupyter
+# But we are not recommending it because of complexity of setup + it does not support TypeScript
+
+# Check if Node.js is installed on your system (preferably the LTS version)
+$ node -v
+$ npm -v
+
+# Date: December 10, 2025
+# Check the installed Node.js version, if the Node.js version is greater than 24 then install Node.js 20 (LTS) via nvm
+# Since the latest Node.js 24 (LTS) version is not supported by ijavascript package
+# Also do the same if your don't have any version of Node.js installed on your system
+$ brew install nvm
+$ nvm list
+$ nvm install 20
+
+# Install uv globally (macOS)
+$ brew install uv
+
+# Create a project directory and navigate inside it
+$ mkdir javascript-notebook
+$ cd javascript-notebook
+
+# Create a project with uv
+$ uv init
+
+# Add Jupyter Notebook as dependency
+$ uv add notebook
+
+# Install ZeroMQ and pkg-config (Required dependency for IJavascript package)
+$ brew install zeromq pkg-config
+
+# Install IJavascript globally
+$ npm install -g ijavascript
+
+# Install the kernel locally
+# NOTE: Installs the kernel inside ~/Library/Jupyter/kernels/javascript
+$ uv run ijsinstall --install=local
+
+# Verify the kernel installation
+$ uv run jupyter kernelspec list
+
+# Update the correct executable in the kernel.json
+$ vim ~/Library/Jupyter/kernels/javascript/kernel.json
+
+# Original content of kernel.json
+{
+  "argv": [
+    "ijskernel",
+    "--hide-undefined",
+    "{connection_file}",
+    "--protocol=5.1"
+  ],
+  "display_name": "JavaScript (Node.js)",
+  "language": "javascript"
+}
+
+# Updated content of kernel.json
+{
+  "argv": [
+    "/Users/mmt9881/.nvm/versions/node/v20.19.6/bin/node",
+    "/Users/mmt9881/.nvm/versions/node/v20.19.6/bin/ijskernel",
+    "--hide-undefined",
+    "{connection_file}",
+    "--protocol=5.1"
+  ],
+  "display_name": "JavaScript (Node.js)",
+  "language": "javascript"
+}
+
+# (Optional) Launch and check if jupyter notebook is installed correctly
+$ uv run jupyter notebook
+
+# Open up the project in VSCode
+$ code .
+
+# Install the following VSCode extensions
+# 1. Prettier (Optional)
+# 2. Jupyter
+# 3. ESLint
+# 4. Babel JavaScript
+
+# Once asked to select a Kernel
+# Choose: 'Jupyter Kernel...' -> JavaScript (Node.js) ~/.nvm/versions/node/v20.19.6/bin/node
+```
+
 ## Jupyter Packages Comparison
 
 | Feature                          | `uv add jupyter`                                            | `uv add notebook`             | `uv add jupyterlab`                   |
