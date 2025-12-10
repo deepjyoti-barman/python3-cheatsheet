@@ -1,5 +1,11 @@
 # Jupyter Notebook
 
+## Install Jupyter Notebook Package
+
+![installation](resources/venv-and-pip-vs-uv-p1.png)
+![additional-operations](resources/venv-and-pip-vs-uv-p2.png)
+![key-differences](resources/venv-and-pip-vs-uv-p3.png)
+
 ## Jupyter Packages Comparison
 
 | Feature                          | `uv add jupyter`                                            | `uv add notebook`             | `uv add jupyterlab`                   |
