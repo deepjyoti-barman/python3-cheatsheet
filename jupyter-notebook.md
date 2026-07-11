@@ -240,6 +240,62 @@ $ code .
 # Choose: 'Jupyter Kernel...' -> JavaScript (Node.js) ~/.nvm/versions/node/v20.19.6/bin/node
 ```
 
+### uv - Jupyter Notebook for Golang
+
+```bash
+# Make sure you already have Go installed
+$ go version
+
+# Install uv globally and verify the installation (macOS)
+$ brew install uv
+# uv --version
+
+# Create a project directory and navigate inside it
+$ mkdir golang-notebook
+$ cd golang-notebook
+
+# Create a project with uv
+$ uv init
+
+# Add Jupyter Notebook as dependency
+$ uv add notebook
+
+# Install Go Jupyter Kernel (Gophernotes)
+# This installs the binary into: $HOME/go/bin/gonb
+$ go install github.com/janpfeifer/gonb@latest
+
+# Add gonb to PATH
+# Append the following line in ~/.zshenv
+$ vim ~/.zshenv
+export PATH=$HOME/go/bin
+$ source ~/.zshenv
+
+# Install Go kernel into Jupyter
+$ gonb --install
+
+# Verify the kernel installation
+$ uv run jupyter kernelspec list
+
+# (Recommended) Install useful Go packages
+# Improves autocomplete & analysis
+$ go install golang.org/x/tools/cmd/goimports@latest
+$ go install golang.org/x/tools/gopls@latest
+
+# (Optional) Launch and check if jupyter notebook is installed correctly
+$ uv run jupyter notebook
+
+# Open up the project in VSCode
+$ code .
+
+# Install the following VSCode extensions
+# 1. Prettier (Optional)
+# 2. Jupyter
+# 3. Go
+
+# Once asked to select a Kernel
+# Choose: 'Jupyter Kernel...' -> Go (gonb)  ~/go/bin/gonb
+```
+
 ## Jupyter Packages Comparison
 
 | Feature                          | `uv add jupyter`                                            | `uv add notebook`             | `uv add jupyterlab`                   |
