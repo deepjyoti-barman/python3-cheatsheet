@@ -1,20 +1,17 @@
-# A variable is just a container for some value inside a computer
-# Comments are notes to yourself and others in your code, comments can also serve to be a to-do list for yourself
+# Ask the user for their name, remove leading/trailing whitespace, and convert to title-case
 name = input("What's your full name? ").strip().title()
+print("PS-1: hello, " + name)
 
 # Syntax: print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
-print("hello, " + name)
-
-print("hello, ", end="")
+print("PS-2: hello, ", end="")
 print(name)
 
-print("hello,", name)
-print("hello, ", name, sep="")
+print("PS-3: hello,", name)
+print("PS-4: hello, ", name, sep="")
 
 # Format string (F-string)
-print(f"hello, {name}")
+print(f"PS-5: hello, {name}")
 
-# Split user's name into first name and last name
+# Splitting the name into first and last, then greeting with the first name
 first, last = name.split(" ")
-
-print(f"hello, {first}")
+print(f"PS-6: hello, {first}")

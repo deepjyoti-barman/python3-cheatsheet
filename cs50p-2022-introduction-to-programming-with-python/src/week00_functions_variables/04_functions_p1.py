@@ -1,4 +1,4 @@
-# Functions are useful to avoid repeating the same code again and again, no need to reinvent the wheel
+# Defining and calling a function with a default parameter for personalized greeting
 def hello(to="world"):
     print("hello,", to)
 

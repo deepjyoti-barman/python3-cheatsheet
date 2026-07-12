@@ -1,10 +1,19 @@
+# Solving the problem that arises due to calling function before defining it
+# and also demonstrating how to access a variable of global scope
+count = 1
+
+
 def main():
-    x = int(input("What's the value of x? "))
-    print("x square is =", square(x))
+    hello()
+    name = input("What's your name? ")
+    hello(name)
 
 
-def square(n):
-    return n * n
+def hello(to="world"):
+    global count
+    print(f"PS-{count}: hello, {to}")
+    count += 1
 
 
+# Always call main() function at the end of the program
 main()
