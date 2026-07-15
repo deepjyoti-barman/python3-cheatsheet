@@ -15,3 +15,12 @@ tuple, or range) and execute a block of code once for each item in that sequence
 items. Each item can be of any data type, and items are enclosed in square brackets [].
 - A `dict` (dictionary) is a built-in data type that stores data in key–value pairs, where each key 
 is unique and used to access its corresponding value.
+
+## Notes on `21_mimic_do_while.py`
+
+- In Python, we have two type of loops
+  - `for` loop: Iterates over sequences
+  - `while` loop: Repeats code while a condition is `True`
+- Python does not have a built-in `do-while` loop like some other programming languages.
+- However, we can mimic the behavior of a `do-while` loop using a `while` loop with a 
+condition that is checked after the block of code is executed.
