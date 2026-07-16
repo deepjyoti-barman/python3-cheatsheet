@@ -36,5 +36,3 @@ do so using this keyword.
 - If you use a function, it must already exist by the time we are calling it, else you are going
 to get a `NameError` stating that the function is not defined.
 - Scope refers to a variable only existing in the context in which you define it.
-
-
