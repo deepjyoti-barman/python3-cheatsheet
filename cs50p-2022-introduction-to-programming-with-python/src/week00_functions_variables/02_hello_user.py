@@ -1,4 +1,8 @@
-# Ask the user for their name, remove leading/trailing whitespace, and convert to title-case
+# Ask the user for their name, remove leading/trailing whitespace,tabs or newlines if any, and convert to title-case
+# rstrip(): Removes unwanted characters from the right end only
+# lstrip(): Removes unwanted characters from the left end only
+# strip(): Removes unwanted characters from both ends of a string
+# By default, they remove whitespace characters such as spaces, tabs (\t), and newlines (\n)
 name = input("What's your full name? ").strip().title()
 print("PS-1: hello, " + name)
 

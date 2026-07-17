@@ -2,7 +2,7 @@
 # Since we want to keep the user prompting for the valid input again and again
 while True:
     try:
-        x = int(input("What is x? "))  # input: cat | # input: dog | # input: 20
+        x = int(input("What is x? "))  # input: cat | input: dog | input: 20
     except ValueError:
         print("x is not an integer")
     else:
