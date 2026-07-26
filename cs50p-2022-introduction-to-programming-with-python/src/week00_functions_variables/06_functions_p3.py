@@ -1,5 +1,6 @@
 # Solving the problem that arises due to calling function before defining it
 # and also demonstrating how to access a variable of global scope
+
 count = 1
 
 

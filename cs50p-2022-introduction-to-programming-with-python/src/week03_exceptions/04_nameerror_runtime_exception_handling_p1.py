@@ -1,4 +1,5 @@
 # Revised Code with exception handling
+
 try:
     x = int(input("What is x? "))  # input: 20 | input: cat
 except ValueError:

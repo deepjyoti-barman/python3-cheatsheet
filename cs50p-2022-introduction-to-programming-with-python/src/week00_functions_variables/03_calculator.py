@@ -1,11 +1,13 @@
 # Arithmetic operations with integers
+
 x = int(input("What's the value of x? "))  # 3
 y = int(input("What's the value of y? "))  # 1
 print("PS-1:", x + y)  # 4
 
 # ---------------------------------------------------------------------------------------
 
-# Arithmetic operations with floating point numbers
+# Arithmetic operations with floating point numbers (Version 1)
+
 p = float(input("What's the value of p? "))  # 999.5
 q = float(input("What's the value of q? "))  # 0.5
 
@@ -15,6 +17,9 @@ r = round(p + q)
 print(f"PS-2: {r:,}")  # 1,000
 
 # ---------------------------------------------------------------------------------------
+
+# Arithmetic operations with floating point numbers (Version 2)
+
 d = float(input("What's the value of d? "))  # 2
 e = float(input("What's the value of e? "))  # 3
 

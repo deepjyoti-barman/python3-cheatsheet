@@ -1,4 +1,5 @@
 # Demonstration of 'NameError' runtime exception
+
 try:
     # When the user enters an integer value, the value is successfully converted to an integer and then assigned to x
     # Later the value of x can be printed in console as well
