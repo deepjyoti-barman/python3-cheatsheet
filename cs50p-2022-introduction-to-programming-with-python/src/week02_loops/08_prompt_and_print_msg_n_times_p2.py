@@ -1,4 +1,5 @@
 # Refactored version using functions to prompt user and print "meow" n times
+
 def main():
     number = get_number()
     meow(number)

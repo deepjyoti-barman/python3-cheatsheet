@@ -1,4 +1,5 @@
 # Version 3: Simplified function to check even or odd
+
 def main():
     x = int(input("What's x? "))  # 3
 

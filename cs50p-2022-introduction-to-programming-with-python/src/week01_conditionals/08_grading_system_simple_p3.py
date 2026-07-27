@@ -1,4 +1,5 @@
 # Version 3: Simplified grading system example
+
 score = int(input("Score: "))  # 75
 
 if score >= 90:

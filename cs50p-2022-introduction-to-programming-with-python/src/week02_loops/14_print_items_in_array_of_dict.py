@@ -1,4 +1,5 @@
 # Print each student's details from a list of dictionaries
+
 students = [
     {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
     {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},

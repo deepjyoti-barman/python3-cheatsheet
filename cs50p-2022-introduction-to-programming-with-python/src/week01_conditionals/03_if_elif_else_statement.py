@@ -1,4 +1,5 @@
 # Version 3: Improvised version with elif and else
+
 x = int(input("What's x? "))  # 2
 y = int(input("What's y? "))  # 2
 

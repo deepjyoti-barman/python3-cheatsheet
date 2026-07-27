@@ -1,4 +1,5 @@
 # Version 5: Improvised version with not operator
+
 x = int(input("What's x? "))  # 3
 y = int(input("What's y? "))  # 3
 

@@ -1,5 +1,6 @@
 # Version 1: Basic version with separate if statements
 # Disadvantage: All conditions are checked even if one is already true
+
 x = int(input("What's x? "))  # 1
 y = int(input("What's y? "))  # 2
 

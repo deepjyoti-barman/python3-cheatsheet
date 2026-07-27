@@ -1,4 +1,5 @@
 # Print each student's name along with their house using a for loop
+
 students = {
     "Harry": "Gryffindor",
     "Hermione": "Gryffindor",

@@ -1,4 +1,5 @@
 # Version 4: Using or operator
+
 x = int(input("What's x? "))  # 1
 y = int(input("What's y? "))  # 1
 

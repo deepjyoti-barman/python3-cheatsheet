@@ -1,4 +1,5 @@
 # Print each student's name individually
+
 students = ["Harry", "Hermione", "Ron"]
 
 print(students[0])

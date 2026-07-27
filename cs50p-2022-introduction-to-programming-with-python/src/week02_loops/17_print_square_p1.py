@@ -1,4 +1,5 @@
 # Print a square of size n x n using nested loops
+
 def main():
     print_square(3)
 

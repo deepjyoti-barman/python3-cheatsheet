@@ -1,6 +1,7 @@
 # Matching multiple values with or (|)
 # The | operator lets you group multiple patterns into a single case block
 # The matched code runs when the value matches any one of the specified patterns
+
 def holiday_check(day):
     match day:
         case "Saturday" | "Sunday":
